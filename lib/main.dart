@@ -5,5 +5,5 @@ import 'package:help_fit_my_version/ui/user/profile/profile.dart';
 import 'package:help_fit_my_version/ui/nav_bar.dart';
 
 void main() {
-  runApp(MaterialApp(home: MainPage()));
+  runApp(const MaterialApp(home: MainPage()));
 }

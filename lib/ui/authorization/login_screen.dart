@@ -15,26 +15,27 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 24, 31),
+      backgroundColor: const Color.fromARGB(255, 23, 24, 31),
       body: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         child: ListView(
           children: [
             Column(
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10, 10, 330, 0),
+                  padding: const EdgeInsets.fromLTRB(10, 10, 330, 0),
                   child: GestureDetector(
                     onTap: () => {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AuthScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => const AuthScreen()),
                       ),
                     },
                     child: Container(
                       width: 100,
                       height: 50,
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios,
                         color: Color.fromRGBO(191, 176, 115, 1),
                       ),
@@ -42,14 +43,14 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                   child: Image.asset(
                     'assets/icons/logo.png',
                     width: 200,
                     height: 200,
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Text(
                     'HelpFit',
@@ -60,45 +61,45 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                    padding: EdgeInsets.fromLTRB(30, 20, 30, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                     child: Container(
                       child: TextField(
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 width: 2,
                                 color: Color.fromRGBO(191, 176, 115, 1),
                               )),
                           labelText: 'email',
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                             color: Color.fromRGBO(191, 176, 115, 1),
                           ),
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.mail,
                             color: Color.fromRGBO(191, 176, 115, 1),
                           ),
                         ),
-                        cursorColor: Color.fromRGBO(191, 176, 115, 1),
+                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
                       ),
                     )),
                 Padding(
-                    padding: EdgeInsets.fromLTRB(30, 10, 30, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: Container(
                       child: TextField(
                         obscureText: _obscureText,
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   width: 2,
                                   color: Color.fromRGBO(191, 176, 115, 1),
                                 )),
                             labelText: 'password',
-                            labelStyle: TextStyle(
+                            labelStyle: const TextStyle(
                               color: Color.fromRGBO(191, 176, 115, 1),
                             ),
-                            prefixIcon: Icon(
+                            prefixIcon: const Icon(
                               Icons.lock,
                               color: Color.fromRGBO(191, 176, 115, 1),
                             ),
@@ -107,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                                 _obscureText
                                     ? Icons.visibility
                                     : Icons.visibility_off,
-                                color: Color.fromRGBO(191, 176, 115, 1),
+                                color: const Color.fromRGBO(191, 176, 115, 1),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -115,10 +116,10 @@ class _LoginPageState extends State<LoginPage> {
                                 });
                               },
                             )),
-                        cursorColor: Color.fromRGBO(191, 176, 115, 1),
+                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
                       ),
                     )),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(30, 20, 30, 0),
                   child: Text(
                     'Или',
@@ -130,13 +131,13 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 20, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                   child: GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MainPage(),
+                            builder: (context) => const MainPage(),
                           ),
                         );
                       },
@@ -154,7 +155,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
-                          color: Color.fromRGBO(234, 250, 176, 1),
+                          color: const Color.fromRGBO(234, 250, 176, 1),
                         ),
                       )),
                 )

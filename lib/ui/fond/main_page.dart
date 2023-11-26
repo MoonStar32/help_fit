@@ -13,31 +13,33 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 23, 24, 31),
+        backgroundColor: const Color.fromARGB(255, 23, 24, 31),
       ),
       drawer: Drawer(
         child: Scaffold(
-          backgroundColor: Color.fromARGB(255, 41, 43, 58),
+          backgroundColor: const Color.fromARGB(255, 41, 43, 58),
           body: Column(
             children: [
               Padding(
-                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                 child: Container(),
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProfilePage()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()));
                 },
                 child: Container(
                   width: 100,
                   height: 100,
                   decoration: BoxDecoration(
-                      color: Color.fromRGBO(191, 176, 115, 1),
+                      color: const Color.fromRGBO(191, 176, 115, 1),
                       borderRadius: BorderRadius.circular(50)),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: Center(
                   child: Text(
@@ -50,23 +52,23 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                         onTap: () {},
                         child: Container(
-                            padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
+                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
                             width: 380,
                             height: 40,
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
+                                  color: const Color.fromRGBO(191, 176, 115, 1),
                                 ),
                                 borderRadius: BorderRadius.circular(60)),
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -77,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Text(
                                   'Друзья',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Color.fromRGBO(191, 176, 115, 1),
                                       fontWeight: FontWeight.bold),
@@ -88,23 +90,23 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                         onTap: () {},
                         child: Container(
-                            padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
+                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
                             width: 380,
                             height: 40,
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
+                                  color: const Color.fromRGBO(191, 176, 115, 1),
                                 ),
                                 borderRadius: BorderRadius.circular(60)),
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -115,7 +117,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Text(
                                   'Фонды',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Color.fromRGBO(191, 176, 115, 1),
                                       fontWeight: FontWeight.bold),
@@ -126,23 +128,23 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                         onTap: () {},
                         child: Container(
-                            padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
+                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
                             width: 380,
                             height: 40,
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
+                                  color: const Color.fromRGBO(191, 176, 115, 1),
                                 ),
                                 borderRadius: BorderRadius.circular(60)),
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -153,7 +155,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Text(
                                   'Статиcтика',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Color.fromRGBO(191, 176, 115, 1),
                                       fontWeight: FontWeight.bold),
@@ -164,23 +166,23 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                         onTap: () {},
                         child: Container(
-                            padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
+                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
                             width: 380,
                             height: 40,
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
+                                  color: const Color.fromRGBO(191, 176, 115, 1),
                                 ),
                                 borderRadius: BorderRadius.circular(60)),
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -191,7 +193,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Text(
                                   'Топ 10',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Color.fromRGBO(191, 176, 115, 1),
                                       fontWeight: FontWeight.bold),
@@ -202,7 +204,7 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -215,10 +217,10 @@ class _MainPageState extends State<MainPage> {
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
+                                  color: const Color.fromRGBO(191, 176, 115, 1),
                                 ),
                                 borderRadius: BorderRadius.circular(60)),
-                            child: Row(
+                            child: const Row(
                               children: [
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
@@ -229,7 +231,7 @@ class _MainPageState extends State<MainPage> {
                                 ),
                                 Text(
                                   'Настройки',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Color.fromRGBO(191, 176, 115, 1),
                                       fontWeight: FontWeight.bold),
@@ -243,10 +245,10 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
       ),
-      backgroundColor: Color.fromARGB(255, 23, 24, 31),
+      backgroundColor: const Color.fromARGB(255, 23, 24, 31),
       body: ListView(
         children: [
-          Row(),
+          const Row(),
           Image.asset(
             "assets/images/legs.png",
             width: 60,

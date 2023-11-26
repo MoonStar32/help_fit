@@ -8,23 +8,23 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 24, 31),
+      backgroundColor: const Color.fromARGB(255, 23, 24, 31),
       body: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         child: ListView(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
                   child: Image.asset(
                     'assets/icons/logo.png',
                     width: 270,
                     height: 270,
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Text(
                     'HelpFit',
@@ -34,7 +34,7 @@ class AuthScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(30, 0, 30, 10),
                   child: Text(
                     'Activity and Charity',
@@ -47,13 +47,13 @@ class AuthScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 10, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RegistrationPage(),
+                          builder: (context) => const RegistrationPage(),
                         ),
                       );
                     },
@@ -71,12 +71,12 @@ class AuthScreen extends StatelessWidget {
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromRGBO(234, 250, 176, 1),
+                        color: const Color.fromRGBO(234, 250, 176, 1),
                       ),
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(30, 20, 30, 0),
                   child: Text(
                     'Или',
@@ -88,13 +88,13 @@ class AuthScreen extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 20, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                   child: GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => LoginPage(),
+                            builder: (context) => const LoginPage(),
                           ),
                         );
                       },
@@ -113,7 +113,7 @@ class AuthScreen extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                              color: Color.fromRGBO(191, 176, 115, 1),
+                              color: const Color.fromRGBO(191, 176, 115, 1),
                               width: 2),
                         ),
                       )),

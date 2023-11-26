@@ -30,27 +30,28 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 23, 24, 31),
+      backgroundColor: const Color.fromARGB(255, 23, 24, 31),
       body: AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         child: ListView(
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10, 0, 330, 0),
+                  padding: const EdgeInsets.fromLTRB(10, 0, 330, 0),
                   child: GestureDetector(
                     onTap: () => {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => AuthScreen()),
+                        MaterialPageRoute(
+                            builder: (context) => const AuthScreen()),
                       ),
                     },
                     child: Container(
                       width: 100,
                       height: 90,
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_back_ios,
                         color: Color.fromRGBO(191, 176, 115, 1),
                       ),
@@ -58,14 +59,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                   child: Image.asset(
                     'assets/icons/logo.png',
                     width: 200,
                     height: 200,
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Text(
                     'HelpFit',
@@ -76,59 +77,60 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 Padding(
-                    padding: EdgeInsets.fromLTRB(30, 10, 30, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: Container(
                       child: TextField(
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 width: 2,
                                 color: Color.fromRGBO(191, 176, 115, 1),
                               )),
                           labelText: _textNick,
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                             color: Color.fromRGBO(191, 176, 115, 1),
                           ),
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.person,
                             color: Color.fromRGBO(191, 176, 115, 1),
                           ),
                         ),
-                        cursorColor: Color.fromRGBO(191, 176, 115, 1),
-                        style: TextStyle(
+                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                        style: const TextStyle(
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
                     )),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Column(
                     children: [
                       Visibility(
                         visible: _isVisible,
                         child: Padding(
-                            padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+                            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                             child: Container(
                               child: TextField(
                                 decoration: InputDecoration(
                                   focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(30),
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         width: 2,
                                         color: Color.fromRGBO(191, 176, 115, 1),
                                       )),
                                   labelText: _textWebsite,
-                                  labelStyle: TextStyle(
+                                  labelStyle: const TextStyle(
                                     color: Color.fromRGBO(191, 176, 115, 1),
                                   ),
-                                  prefixIcon: Icon(
+                                  prefixIcon: const Icon(
                                     Icons.web,
                                     color: Color.fromRGBO(191, 176, 115, 1),
                                   ),
                                 ),
-                                cursorColor: Color.fromRGBO(191, 176, 115, 1),
-                                style: TextStyle(
+                                cursorColor:
+                                    const Color.fromRGBO(191, 176, 115, 1),
+                                style: const TextStyle(
                                   color: Color.fromRGBO(191, 176, 115, 1),
                                 ),
                               ),
@@ -138,47 +140,47 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 Padding(
-                    padding: EdgeInsets.fromLTRB(30, 10, 30, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: Container(
                       child: TextField(
                         decoration: InputDecoration(
                           focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 width: 2,
                                 color: Color.fromRGBO(191, 176, 115, 1),
                               )),
                           labelText: _textEmail,
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                             color: Color.fromRGBO(191, 176, 115, 1),
                           ),
-                          prefixIcon: Icon(Icons.mail,
+                          prefixIcon: const Icon(Icons.mail,
                               color: Color.fromRGBO(191, 176, 115, 1)),
                         ),
-                        cursorColor: Color.fromRGBO(191, 176, 115, 1),
-                        style: TextStyle(
+                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                        style: const TextStyle(
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
                     )),
                 Padding(
-                    padding: EdgeInsets.fromLTRB(30, 10, 30, 0),
+                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
                     child: Container(
                       child: TextField(
                         obscureText: _obscureText,
-                        cursorColor: Color.fromRGBO(191, 176, 115, 1),
+                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
                         decoration: InputDecoration(
                             focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(30),
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   width: 2,
                                   color: Color.fromRGBO(191, 176, 115, 1),
                                 )),
                             labelText: _textPassword,
-                            labelStyle: TextStyle(
+                            labelStyle: const TextStyle(
                               color: Color.fromRGBO(191, 176, 115, 1),
                             ),
-                            prefixIcon: Icon(
+                            prefixIcon: const Icon(
                               Icons.lock,
                               color: Color.fromRGBO(191, 176, 115, 1),
                             ),
@@ -187,7 +189,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                 _obscureText
                                     ? Icons.visibility
                                     : Icons.visibility_off,
-                                color: Color.fromRGBO(191, 176, 115, 1),
+                                color: const Color.fromRGBO(191, 176, 115, 1),
                               ),
                               onPressed: () {
                                 setState(() {
@@ -195,7 +197,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                                 });
                               },
                             )),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
@@ -203,7 +205,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       'Регистрация фонда',
                       style: TextStyle(
                         color: Color.fromRGBO(109, 103, 80, 1),
@@ -223,13 +225,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MainPage(),
+                          builder: (context) => const MainPage(),
                         ),
                       );
                     },
@@ -247,19 +249,19 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: Color.fromRGBO(234, 250, 176, 1),
+                        color: const Color.fromRGBO(234, 250, 176, 1),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(30, 40, 30, 0),
+                  padding: const EdgeInsets.fromLTRB(30, 40, 30, 0),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => MainPage(),
+                          builder: (context) => const MainPage(),
                         ),
                       );
                     },
@@ -278,7 +280,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       decoration: BoxDecoration(
                         border: Border.all(
                           width: 0.8,
-                          color: Color.fromRGBO(191, 176, 115, 1),
+                          color: const Color.fromRGBO(191, 176, 115, 1),
                         ),
                         borderRadius: BorderRadius.circular(30),
                       ),

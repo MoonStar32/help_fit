@@ -13,7 +13,7 @@ class _ProfileState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 23, 24, 31),
+        backgroundColor: const Color.fromARGB(255, 23, 24, 31),
         body: Stack(
           children: [
             ListView(children: [
@@ -21,19 +21,19 @@ class _ProfileState extends State<ProfilePage> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     child: Container(
                       width: 380,
                       height: 40,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(60)),
-                      child: Row(
+                      child: const Row(
                         children: [Text('data')],
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 35, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 35, 0, 10),
                     child: Container(
                       width: 380,
                       height: 40,
@@ -42,7 +42,7 @@ class _ProfileState extends State<ProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     child: Container(
                       width: 380,
                       height: 40,
@@ -51,7 +51,7 @@ class _ProfileState extends State<ProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     child: Container(
                       width: 380,
                       height: 10,
@@ -60,20 +60,21 @@ class _ProfileState extends State<ProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 10),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         GestureDetector(
                             onTap: () {},
                             child: Container(
-                                padding: EdgeInsets.fromLTRB(20, 5, 0, 5),
+                                padding: const EdgeInsets.fromLTRB(20, 5, 0, 5),
                                 width: 380,
                                 height: 40,
                                 decoration: BoxDecoration(
-                                    color: Color.fromARGB(223, 255, 255, 255),
+                                    color: const Color.fromARGB(
+                                        223, 255, 255, 255),
                                     borderRadius: BorderRadius.circular(60)),
-                                child: Row(
+                                child: const Row(
                                   children: [
                                     Padding(
                                       padding:
@@ -82,7 +83,7 @@ class _ProfileState extends State<ProfilePage> {
                                     ),
                                     Text(
                                       'История',
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                           fontSize: 17.0,
                                           color: Colors.black,
                                           fontWeight: FontWeight.bold),
@@ -93,31 +94,31 @@ class _ProfileState extends State<ProfilePage> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                       width: 380,
                       height: 200,
                       decoration: BoxDecoration(
-                          color: Color.fromARGB(164, 241, 71, 133),
+                          color: const Color.fromARGB(164, 241, 71, 133),
                           borderRadius: BorderRadius.circular(20)),
                       child: Stack(
                         children: [
                           Padding(
-                            padding: EdgeInsets.fromLTRB(23, 130, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(23, 130, 0, 0),
                             child: Container(
-                              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                               width: 340,
                               height: 40,
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(50),
                                   color: Colors.white),
-                              child: Column(
+                              child: const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     'Бесплатный пробный период',
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontSize: 17.0,
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold),
@@ -138,11 +139,11 @@ class _ProfileState extends State<ProfilePage> {
               children: [
                 Center(
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                     width: 380,
                     height: 260,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 41, 43, 58),
+                      color: const Color.fromARGB(255, 41, 43, 58),
                       borderRadius: BorderRadius.circular(30),
                     ),
                   ),
@@ -154,15 +155,15 @@ class _ProfileState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                    padding: EdgeInsets.fromLTRB(0, 55, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(0, 55, 0, 0),
                     child: Container(
-                      padding: EdgeInsets.all(8), // Border width
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(8), // Border width
+                      decoration: const BoxDecoration(
                           color: Color.fromRGBO(191, 176, 115, 1),
                           shape: BoxShape.circle),
                       child: ClipOval(
                         child: SizedBox.fromSize(
-                          size: Size.fromRadius(48), // Image radius
+                          size: const Size.fromRadius(48), // Image radius
                           child: Image.asset(
                             'assets/images/ava.jpg',
                             width: MediaQuery.of(context).size.width,
@@ -173,7 +174,7 @@ class _ProfileState extends State<ProfilePage> {
                     )),
               ],
             )),
-            Center(
+            const Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -181,7 +182,7 @@ class _ProfileState extends State<ProfilePage> {
                     padding: EdgeInsets.fromLTRB(7, 170, 0, 0),
                     child: Text(
                       'wa1terwhite.yo',
-                      style: const TextStyle(
+                      style: TextStyle(
                           fontSize: 20.0,
                           color: Color.fromARGB(255, 255, 255, 255),
                           fontWeight: FontWeight.bold),
@@ -194,16 +195,16 @@ class _ProfileState extends State<ProfilePage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsets.fromLTRB(20, 195, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(20, 195, 0, 0),
                   child: Row(
                     children: [
                       Container(
                           width: 170,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: Color.fromRGBO(234, 250, 176, 1),
+                            color: const Color.fromRGBO(234, 250, 176, 1),
                             borderRadius: BorderRadius.circular(60),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 color: Color.fromRGBO(234, 250, 176, 0.349),
                                 blurRadius: 12,
@@ -211,13 +212,13 @@ class _ProfileState extends State<ProfilePage> {
                               ),
                             ],
                           ),
-                          child: Row(
+                          child: const Row(
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(26, 0, 0, 0),
                                 child: Text(
                                   'Написать',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold),
@@ -239,9 +240,9 @@ class _ProfileState extends State<ProfilePage> {
                           width: 170,
                           height: 50,
                           decoration: BoxDecoration(
-                            color: Color.fromRGBO(234, 250, 176, 1),
+                            color: const Color.fromRGBO(234, 250, 176, 1),
                             borderRadius: BorderRadius.circular(60),
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 color: Color.fromRGBO(234, 250, 176, 0.349),
                                 blurRadius: 12,
@@ -249,13 +250,13 @@ class _ProfileState extends State<ProfilePage> {
                               ),
                             ],
                           ),
-                          child: Row(
+                          child: const Row(
                             children: [
                               Padding(
                                 padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                                 child: Text(
                                   'Друг',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontSize: 17.0,
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold),
@@ -276,18 +277,18 @@ class _ProfileState extends State<ProfilePage> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(10, 0, 330, 0),
+              padding: const EdgeInsets.fromLTRB(10, 0, 330, 0),
               child: GestureDetector(
                 onTap: () => {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MainPage()),
+                    MaterialPageRoute(builder: (context) => const MainPage()),
                   ),
                 },
                 child: Container(
                   width: 100,
                   height: 90,
-                  child: Icon(
+                  child: const Icon(
                     Icons.arrow_back_ios,
                     color: Color.fromRGBO(191, 176, 115, 1),
                   ),
