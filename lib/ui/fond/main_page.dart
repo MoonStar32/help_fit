@@ -27,16 +27,19 @@ class _MainPageState extends State<MainPage> {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ProfilePage()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ProfilePage(),
+                    ),
+                  );
                 },
                 child: Container(
                   width: 100,
                   height: 100,
                   decoration: BoxDecoration(
-                      color: const Color.fromRGBO(191, 176, 115, 1),
-                      borderRadius: BorderRadius.circular(50)),
+                    color: const Color.fromRGBO(191, 176, 115, 1),
+                    borderRadius: BorderRadius.circular(50),
+                  ),
                 ),
               ),
               const Padding(
@@ -57,35 +60,39 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
-                            width: 380,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 2,
-                                  color: const Color.fromRGBO(191, 176, 115, 1),
-                                ),
-                                borderRadius: BorderRadius.circular(60)),
-                            child: const Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
-                                  child: Icon(
-                                    Icons.person_2,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                Text(
-                                  'Друзья',
-                                  style: TextStyle(
-                                      fontSize: 17.0,
-                                      color: Color.fromRGBO(191, 176, 115, 1),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ))),
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
+                        width: 380,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                          ),
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                              child: Icon(
+                                Icons.person_2,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            Text(
+                              'Друзья',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -95,35 +102,39 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
-                            width: 380,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 2,
-                                  color: const Color.fromRGBO(191, 176, 115, 1),
-                                ),
-                                borderRadius: BorderRadius.circular(60)),
-                            child: const Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
-                                  child: Icon(
-                                    Icons.collections,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                Text(
-                                  'Фонды',
-                                  style: TextStyle(
-                                      fontSize: 17.0,
-                                      color: Color.fromRGBO(191, 176, 115, 1),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ))),
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
+                        width: 380,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                          ),
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                              child: Icon(
+                                Icons.collections,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            Text(
+                              'Фонды',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -133,35 +144,39 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
-                            width: 380,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 2,
-                                  color: const Color.fromRGBO(191, 176, 115, 1),
-                                ),
-                                borderRadius: BorderRadius.circular(60)),
-                            child: const Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
-                                  child: Icon(
-                                    Icons.graphic_eq,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                Text(
-                                  'Статиcтика',
-                                  style: TextStyle(
-                                      fontSize: 17.0,
-                                      color: Color.fromRGBO(191, 176, 115, 1),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ))),
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
+                        width: 380,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                          ),
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                              child: Icon(
+                                Icons.graphic_eq,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            Text(
+                              'Статиcтика',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -171,35 +186,39 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
-                            width: 380,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 2,
-                                  color: const Color.fromRGBO(191, 176, 115, 1),
-                                ),
-                                borderRadius: BorderRadius.circular(60)),
-                            child: const Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
-                                  child: Icon(
-                                    Icons.verified_user_sharp,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                Text(
-                                  'Топ 10',
-                                  style: TextStyle(
-                                      fontSize: 17.0,
-                                      color: Color.fromRGBO(191, 176, 115, 1),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ))),
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
+                        width: 380,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                          ),
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                              child: Icon(
+                                Icons.verified_user_sharp,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            Text(
+                              'Топ 10',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -209,35 +228,39 @@ class _MainPageState extends State<MainPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
-                        onTap: () {},
-                        child: Container(
-                            padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
-                            width: 380,
-                            height: 40,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  width: 2,
-                                  color: const Color.fromRGBO(191, 176, 115, 1),
-                                ),
-                                borderRadius: BorderRadius.circular(60)),
-                            child: const Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
-                                  child: Icon(
-                                    Icons.settings,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                Text(
-                                  'Настройки',
-                                  style: TextStyle(
-                                      fontSize: 17.0,
-                                      color: Color.fromRGBO(191, 176, 115, 1),
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ))),
+                      onTap: () {},
+                      child: Container(
+                        padding: const EdgeInsets.fromLTRB(5, 5, 0, 5),
+                        width: 380,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                          ),
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                        child: const Row(
+                          children: [
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 0, 20, 5),
+                              child: Icon(
+                                Icons.settings,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            Text(
+                              'Настройки',
+                              style: TextStyle(
+                                fontSize: 17.0,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

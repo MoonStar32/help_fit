@@ -14,52 +14,53 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: NavigationBar(
-          onDestinationSelected: (int index) {
-            setState(() {
-              currentPageIndex = index;
-            });
-          },
-          backgroundColor: const Color.fromARGB(255, 113, 255, 161),
-          selectedIndex: currentPageIndex,
-          destinations: const <Widget>[
-            NavigationDestination(
-              selectedIcon: Icon(
-                Icons.star,
-                color: Colors.black,
-              ),
-              icon: Icon(
-                Icons.star_outlined,
-                color: Colors.white,
-              ),
-              label: '',
+      bottomNavigationBar: NavigationBar(
+        onDestinationSelected: (int index) {
+          setState(() {
+            currentPageIndex = index;
+          });
+        },
+        backgroundColor: const Color.fromARGB(255, 113, 255, 161),
+        selectedIndex: currentPageIndex,
+        destinations: const <Widget>[
+          NavigationDestination(
+            selectedIcon: Icon(
+              Icons.star,
+              color: Colors.black,
             ),
-            NavigationDestination(
-              selectedIcon: Icon(
-                Icons.chat,
-                color: Colors.black,
-              ),
-              icon: Icon(
-                Icons.chat_outlined,
-                color: Colors.white,
-              ),
-              label: '',
+            icon: Icon(
+              Icons.star_outlined,
+              color: Colors.white,
             ),
-            NavigationDestination(
-              selectedIcon: Icon(
-                Icons.account_circle,
-                color: Colors.black,
-              ),
-              icon: Icon(
-                Icons.account_circle_outlined,
-                color: Colors.white,
-              ),
-              label: '',
-            )
-          ],
-        ),
-        body: <Widget>[
-          const ProfilePage(),
-        ][currentPageIndex]);
+            label: '',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(
+              Icons.chat,
+              color: Colors.black,
+            ),
+            icon: Icon(
+              Icons.chat_outlined,
+              color: Colors.white,
+            ),
+            label: '',
+          ),
+          NavigationDestination(
+            selectedIcon: Icon(
+              Icons.account_circle,
+              color: Colors.black,
+            ),
+            icon: Icon(
+              Icons.account_circle_outlined,
+              color: Colors.white,
+            ),
+            label: '',
+          )
+        ],
+      ),
+      body: <Widget>[
+        const ProfilePage(),
+      ][currentPageIndex],
+    );
   }
 }

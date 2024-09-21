@@ -13,9 +13,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
   bool _obscureText = true;
   bool _isVisible = false;
   String _textNick = 'nickname';
-  String _textEmail = 'email';
-  String _textPassword = 'password';
-  String _textWebsite = 'website';
+  final String _textEmail = 'email';
+  final String _textPassword = 'password';
+  final String _textWebsite = 'website';
   String _textButtonFond = 'Создать аккаунт';
 
   void _textVisibility() {
@@ -45,13 +45,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const AuthScreen()),
+                          builder: (context) => const AuthScreen(),
+                        ),
                       ),
                     },
-                    child: Container(
+                    child: const SizedBox(
                       width: 100,
                       height: 90,
-                      child: const Icon(
+                      child: Icon(
                         Icons.arrow_back_ios,
                         color: Color.fromRGBO(191, 176, 115, 1),
                       ),
@@ -77,31 +78,31 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   ),
                 ),
                 Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-                    child: Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: const BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(191, 176, 115, 1),
-                              )),
-                          labelText: _textNick,
-                          labelStyle: const TextStyle(
-                            color: Color.fromRGBO(191, 176, 115, 1),
-                          ),
-                          prefixIcon: const Icon(
-                            Icons.person,
-                            color: Color.fromRGBO(191, 176, 115, 1),
-                          ),
-                        ),
-                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
-                        style: const TextStyle(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                          width: 2,
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
-                    )),
+                      labelText: _textNick,
+                      labelStyle: const TextStyle(
+                        color: Color.fromRGBO(191, 176, 115, 1),
+                      ),
+                      prefixIcon: const Icon(
+                        Icons.person,
+                        color: Color.fromRGBO(191, 176, 115, 1),
+                      ),
+                    ),
+                    cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                    style: const TextStyle(
+                      color: Color.fromRGBO(191, 176, 115, 1),
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                   child: Column(
@@ -109,99 +110,99 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       Visibility(
                         visible: _isVisible,
                         child: Padding(
-                            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-                            child: Container(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  focusedBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(30),
-                                      borderSide: const BorderSide(
-                                        width: 2,
-                                        color: Color.fromRGBO(191, 176, 115, 1),
-                                      )),
-                                  labelText: _textWebsite,
-                                  labelStyle: const TextStyle(
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                  prefixIcon: const Icon(
-                                    Icons.web,
-                                    color: Color.fromRGBO(191, 176, 115, 1),
-                                  ),
-                                ),
-                                cursorColor:
-                                    const Color.fromRGBO(191, 176, 115, 1),
-                                style: const TextStyle(
+                          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: const BorderSide(
+                                  width: 2,
                                   color: Color.fromRGBO(191, 176, 115, 1),
                                 ),
                               ),
-                            )),
+                              labelText: _textWebsite,
+                              labelStyle: const TextStyle(
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                              prefixIcon: const Icon(
+                                Icons.web,
+                                color: Color.fromRGBO(191, 176, 115, 1),
+                              ),
+                            ),
+                            cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                            style: const TextStyle(
+                              color: Color.fromRGBO(191, 176, 115, 1),
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-                    child: Container(
-                      child: TextField(
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: const BorderSide(
-                                width: 2,
-                                color: Color.fromRGBO(191, 176, 115, 1),
-                              )),
-                          labelText: _textEmail,
-                          labelStyle: const TextStyle(
-                            color: Color.fromRGBO(191, 176, 115, 1),
-                          ),
-                          prefixIcon: const Icon(Icons.mail,
-                              color: Color.fromRGBO(191, 176, 115, 1)),
-                        ),
-                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
-                        style: const TextStyle(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                          width: 2,
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
-                    )),
+                      labelText: _textEmail,
+                      labelStyle: const TextStyle(
+                        color: Color.fromRGBO(191, 176, 115, 1),
+                      ),
+                      prefixIcon: const Icon(Icons.mail,
+                          color: Color.fromRGBO(191, 176, 115, 1)),
+                    ),
+                    cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                    style: const TextStyle(
+                      color: Color.fromRGBO(191, 176, 115, 1),
+                    ),
+                  ),
+                ),
                 Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
-                    child: Container(
-                      child: TextField(
-                        obscureText: _obscureText,
-                        cursorColor: const Color.fromRGBO(191, 176, 115, 1),
-                        decoration: InputDecoration(
-                            focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(30),
-                                borderSide: const BorderSide(
-                                  width: 2,
-                                  color: Color.fromRGBO(191, 176, 115, 1),
-                                )),
-                            labelText: _textPassword,
-                            labelStyle: const TextStyle(
-                              color: Color.fromRGBO(191, 176, 115, 1),
-                            ),
-                            prefixIcon: const Icon(
-                              Icons.lock,
-                              color: Color.fromRGBO(191, 176, 115, 1),
-                            ),
-                            suffixIcon: IconButton(
-                              icon: Icon(
-                                _obscureText
-                                    ? Icons.visibility
-                                    : Icons.visibility_off,
-                                color: const Color.fromRGBO(191, 176, 115, 1),
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _obscureText = !_obscureText;
-                                });
-                              },
-                            )),
-                        style: const TextStyle(
+                  padding: const EdgeInsets.fromLTRB(30, 10, 30, 0),
+                  child: TextField(
+                    obscureText: _obscureText,
+                    cursorColor: const Color.fromRGBO(191, 176, 115, 1),
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                          width: 2,
                           color: Color.fromRGBO(191, 176, 115, 1),
                         ),
                       ),
-                    )),
+                      labelText: _textPassword,
+                      labelStyle: const TextStyle(
+                        color: Color.fromRGBO(191, 176, 115, 1),
+                      ),
+                      prefixIcon: const Icon(
+                        Icons.lock,
+                        color: Color.fromRGBO(191, 176, 115, 1),
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _obscureText
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: const Color.fromRGBO(191, 176, 115, 1),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _obscureText = !_obscureText;
+                          });
+                        },
+                      ),
+                    ),
+                    style: const TextStyle(
+                      color: Color.fromRGBO(191, 176, 115, 1),
+                    ),
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -212,8 +213,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       ),
                     ),
                     Switch(
-                      inactiveTrackColor: Color.fromRGBO(45, 42, 31, 1),
-                      activeColor: Color.fromRGBO(191, 176, 115, 1),
+                      inactiveTrackColor: const Color.fromRGBO(45, 42, 31, 1),
+                      activeColor: const Color.fromRGBO(191, 176, 115, 1),
                       value: _isVisible,
                       onChanged: (value) {
                         _textVisibility();
@@ -238,18 +239,18 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: const Color.fromRGBO(234, 250, 176, 1),
+                      ),
                       child: Center(
                         child: Text(
                           _textButtonFond,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Color.fromARGB(255, 23, 23, 23),
                             fontSize: 20,
                           ),
                         ),
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color.fromRGBO(234, 250, 176, 1),
                       ),
                     ),
                   ),
@@ -268,7 +269,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: 50,
-                      child: Center(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.8,
+                          color: const Color.fromRGBO(191, 176, 115, 1),
+                        ),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Center(
                         child: Text(
                           'Через Google',
                           style: TextStyle(
@@ -276,13 +284,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                             fontSize: 20,
                           ),
                         ),
-                      ),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          width: 0.8,
-                          color: const Color.fromRGBO(191, 176, 115, 1),
-                        ),
-                        borderRadius: BorderRadius.circular(30),
                       ),
                     ),
                   ),

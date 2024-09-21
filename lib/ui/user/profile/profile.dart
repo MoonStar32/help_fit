@@ -9,16 +9,16 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfileState extends State<ProfilePage> {
-  bool _lightIsOn = false;
-  late double _distance = 0;
-  late double _speed = 0;
+  late final double _distance = 0;
+  late final double _speed = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 23, 24, 31),
-        body: Stack(
-          children: [
-            ListView(children: [
+      backgroundColor: const Color.fromARGB(255, 23, 24, 31),
+      body: Stack(
+        children: [
+          ListView(
+            children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -28,9 +28,12 @@ class _ProfileState extends State<ProfilePage> {
                       width: 380,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60)),
+                        borderRadius: BorderRadius.circular(60),
+                      ),
                       child: const Row(
-                        children: [Text('data')],
+                        children: [
+                          Text('data'),
+                        ],
                       ),
                     ),
                   ),
@@ -40,7 +43,8 @@ class _ProfileState extends State<ProfilePage> {
                       width: 380,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60)),
+                        borderRadius: BorderRadius.circular(60),
+                      ),
                     ),
                   ),
                   Padding(
@@ -49,7 +53,8 @@ class _ProfileState extends State<ProfilePage> {
                       width: 380,
                       height: 40,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60)),
+                        borderRadius: BorderRadius.circular(60),
+                      ),
                     ),
                   ),
                   Padding(
@@ -58,7 +63,8 @@ class _ProfileState extends State<ProfilePage> {
                       width: 380,
                       height: 10,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(60)),
+                        borderRadius: BorderRadius.circular(60),
+                      ),
                     ),
                   ),
                   Padding(
@@ -72,8 +78,9 @@ class _ProfileState extends State<ProfilePage> {
                           height: MediaQuery.of(context).size.height * 0.2,
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 41, 43, 58),
-                              borderRadius: BorderRadius.circular(15)),
+                            color: const Color.fromARGB(255, 41, 43, 58),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -107,8 +114,9 @@ class _ProfileState extends State<ProfilePage> {
                           height: MediaQuery.of(context).size.height * 0.2,
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 41, 43, 58),
-                              borderRadius: BorderRadius.circular(15)),
+                            color: const Color.fromARGB(255, 41, 43, 58),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -147,8 +155,9 @@ class _ProfileState extends State<ProfilePage> {
                       width: 380,
                       height: 200,
                       decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 41, 43, 58),
-                          borderRadius: BorderRadius.circular(20)),
+                        color: const Color.fromARGB(255, 41, 43, 58),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
                       child: Stack(
                         children: [
                           const Padding(
@@ -174,7 +183,7 @@ class _ProfileState extends State<ProfilePage> {
                           Padding(
                             padding: const EdgeInsets.fromLTRB(23, 120, 0, 0),
                             child: Container(
-                              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                               width: 340,
                               height: 50,
                               decoration: BoxDecoration(
@@ -187,9 +196,10 @@ class _ProfileState extends State<ProfilePage> {
                                   Text(
                                     'Посмотреть рейтинг',
                                     style: TextStyle(
-                                        fontSize: 17.0,
-                                        color: Color.fromARGB(255, 41, 43, 58),
-                                        fontWeight: FontWeight.bold),
+                                      fontSize: 17.0,
+                                      color: Color.fromARGB(255, 41, 43, 58),
+                                      fontWeight: FontWeight.bold,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -201,169 +211,181 @@ class _ProfileState extends State<ProfilePage> {
                   ),
                 ],
               )
-            ]),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Center(
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
-                    width: 380,
-                    height: 300,
-                    decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 41, 43, 58),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  width: 380,
+                  height: 300,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 41, 43, 58),
+                    borderRadius: BorderRadius.circular(30),
                   ),
                 ),
-              ],
-            ),
-            Center(
-                child: Column(
+              ),
+            ],
+          ),
+          Center(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 55, 0, 0),
-                    child: Container(
-                      padding: const EdgeInsets.all(8), // Border width
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(191, 176, 115, 1),
-                          shape: BoxShape.circle),
-                      child: ClipOval(
-                        child: SizedBox.fromSize(
-                          size: Size.fromRadius(48), // Image radius
-                          child: Image.asset(
-                            'assets/images/ava.jpg',
-                            width: MediaQuery.of(context).size.width,
-                            height: 150,
-                          ),
+                  padding: const EdgeInsets.fromLTRB(0, 55, 0, 0),
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: const BoxDecoration(
+                      color: Color.fromRGBO(191, 176, 115, 1),
+                      shape: BoxShape.circle,
+                    ),
+                    child: ClipOval(
+                      child: SizedBox.fromSize(
+                        size: const Size.fromRadius(48),
+                        child: Image.asset(
+                          'assets/images/ava.jpg',
+                          width: MediaQuery.of(context).size.width,
+                          height: 150,
                         ),
                       ),
-                    )),
-              ],
-            )),
-            const Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(7, 170, 0, 0),
-                    child: Text(
-                      'wa1terwhite.yo',
-                      style: TextStyle(
-                          fontSize: 20.0,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          fontWeight: FontWeight.bold),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+              ],
             ),
-            Column(
+          ),
+          const Center(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(45, 220, 0, 0),
-                  child: Row(
-                    children: [
-                      Container(
-                          width: 150,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(234, 250, 176, 1),
-                            borderRadius: BorderRadius.circular(60),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color.fromRGBO(234, 250, 176, 0.349),
-                                blurRadius: 12,
-                                offset: Offset(0, 8),
-                              ),
-                            ],
-                          ),
-                          child: const Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                                child: Text(
-                                  'Написать',
-                                  style: TextStyle(
-                                      fontSize: 15.0,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(5, 10, 20, 20),
-                                child: Icon(
-                                  Icons.chat,
-                                  size: 30,
-                                ),
-                              ),
-                            ],
-                          )),
-                      Container(
-                        width: 20,
-                      ),
-                      Container(
-                          width: 150,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: const Color.fromRGBO(234, 250, 176, 1),
-                            borderRadius: BorderRadius.circular(60),
-                            boxShadow: const [
-                              BoxShadow(
-                                color: Color.fromRGBO(234, 250, 176, 0.349),
-                                blurRadius: 12,
-                                offset: Offset(0, 8),
-                              ),
-                            ],
-                          ),
-                          child: const Row(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-                                child: Text(
-                                  'Друг',
-                                  style: TextStyle(
-                                      fontSize: 15.0,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(5, 10, 15, 20),
-                                child: Icon(
-                                  Icons.person_add,
-                                  size: 30,
-                                ),
-                              ),
-                            ],
-                          )),
-                    ],
+                  padding: EdgeInsets.fromLTRB(7, 170, 0, 0),
+                  child: Text(
+                    'wa1terwhite.yo',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
+                )
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 330, 0),
-              child: GestureDetector(
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const MainPage()),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(45, 220, 0, 0),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 150,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(234, 250, 176, 1),
+                        borderRadius: BorderRadius.circular(60),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color.fromRGBO(234, 250, 176, 0.349),
+                            blurRadius: 12,
+                            offset: Offset(0, 8),
+                          ),
+                        ],
+                      ),
+                      child: const Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                            child: Text(
+                              'Написать',
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(5, 10, 20, 20),
+                            child: Icon(
+                              Icons.chat,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      width: 20,
+                    ),
+                    Container(
+                      width: 150,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: const Color.fromRGBO(234, 250, 176, 1),
+                        borderRadius: BorderRadius.circular(60),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color.fromRGBO(234, 250, 176, 0.349),
+                            blurRadius: 12,
+                            offset: Offset(0, 8),
+                          ),
+                        ],
+                      ),
+                      child: const Row(
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                            child: Text(
+                              'Друг',
+                              style: TextStyle(
+                                fontSize: 15.0,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(5, 10, 15, 20),
+                            child: Icon(
+                              Icons.person_add,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(10, 0, 330, 0),
+            child: GestureDetector(
+              onTap: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MainPage(),
                   ),
-                },
-                child: Container(
-                  width: 100,
-                  height: 90,
-                  child: const Icon(
-                    Icons.arrow_back_ios,
-                    color: Color.fromRGBO(191, 176, 115, 1),
-                  ),
+                ),
+              },
+              child: const SizedBox(
+                width: 100,
+                height: 90,
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  color: Color.fromRGBO(191, 176, 115, 1),
                 ),
               ),
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
