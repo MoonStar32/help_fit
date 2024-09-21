@@ -60,7 +60,11 @@ class AuthScreen extends StatelessWidget {
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       height: 50,
-                      child: Center(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: const Color.fromRGBO(234, 250, 176, 1),
+                      ),
+                      child: const Center(
                         child: Text(
                           'Sign Up',
                           style: TextStyle(
@@ -68,10 +72,6 @@ class AuthScreen extends StatelessWidget {
                             fontSize: 20,
                           ),
                         ),
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: const Color.fromRGBO(234, 250, 176, 1),
                       ),
                     ),
                   ),
@@ -90,33 +90,34 @@ class AuthScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(30, 20, 30, 0),
                   child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginPage(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        height: 50,
-                        child: Center(
-                          child: Text(
-                            'Log in',
-                            style: TextStyle(
-                              color: Color.fromRGBO(191, 176, 115, 1),
-                              fontSize: 20,
-                            ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginPage(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(
+                            color: const Color.fromRGBO(191, 176, 115, 1),
+                            width: 2),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Log in',
+                          style: TextStyle(
+                            color: Color.fromRGBO(191, 176, 115, 1),
+                            fontSize: 20,
                           ),
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(
-                              color: const Color.fromRGBO(191, 176, 115, 1),
-                              width: 2),
-                        ),
-                      )),
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
